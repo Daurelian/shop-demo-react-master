@@ -1,13 +1,15 @@
-import React, {useReducer} from "react";
+import React, {useContext} from "react";
 import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
 import { Typography, Badge, Container, Grid } from "@mui/material";
+import { AppContext } from "../App";
 
 
 
 
 
 
-export default function Navigation({dispatch}) {
+export default function Navigation() {
+const {state,dispatch} = useContext(AppContext);
  
 
   return (

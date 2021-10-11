@@ -1,4 +1,4 @@
-import { useState, useEffect,useReducer } from "react";
+import { useState, useEffect,useReducer,createContext } from "react";
 import Basket from "./Basket";
 import Books from "./Books";
 
@@ -19,15 +19,17 @@ function reducer(state,action){
 
   }
 }
-
+export const AppContext = createContext();
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className='App'>
-      <Navigation dispatch={dispatch}/>
-      <Books />
-      <Basket opened={state.opened} dispatch={dispatch} />
+      <AppContext.Provider value={{state,dispatch}}>
+      <Navigation/>
+      <Books/>
+      <Basket />
+      </AppContext.Provider>
     </div>
   );
 }
