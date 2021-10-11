@@ -25,7 +25,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className='App'>
-      <Navigation initialState={initialState} reducer={reducer} dispatch={dispatch}/>
+      <Navigation dispatch={dispatch}/>
       <Books />
       <Basket opened={state.opened} dispatch={dispatch} />
     </div>

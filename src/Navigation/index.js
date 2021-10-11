@@ -7,7 +7,7 @@ import { Typography, Badge, Container, Grid } from "@mui/material";
 
 
 
-export default function Navigation({reducer, initialState, dispatch}) {
+export default function Navigation({dispatch}) {
  
 
   return (
