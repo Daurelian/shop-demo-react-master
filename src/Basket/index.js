@@ -12,7 +12,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import DeleteTwoToneIcon from "@mui/icons-material/DeleteTwoTone";
 
-export default function Basket({ opened,dispatch}) {
+export default function Basket({ opened, dispatch}) {
 
   return (
     <Box
