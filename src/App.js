@@ -64,6 +64,20 @@ function reducer(state, action) {
         },
       };
       break;
+
+    case "Merge":
+      return {
+        ...state,
+        books: {
+          ...state.books,
+          filteredBooks:
+            action.payload.filter === "All"
+              ? books.filter (function (books) {return books.title.toLowerCase().includes(action.payload.value.toLowerCase())})
+              : books.filter(function (books) {return books.category === action.payload.filter &&  books.title.toLowerCase().includes(action.payload.value.toLowerCase())}),
+        },
+        filters: { ...state.filters, category: action.payload.filter },
+      };
+      break;
     default:
       return state;
       break;

@@ -16,7 +16,8 @@ export default function Filters() {
             key={filter}
             label={filter}
             color={state.filters.category === filter ? "secondary" : "primary"}
-            onClick={() => dispatch({ type: "FilterBook", payload: filter })}
+            // onClick={() => dispatch({ type: "FilterBook", payload: filter })}
+            onClick={() => dispatch({ type: "Merge", payload: {filter, value:""} })}
             variant={state.filters.category === filter ? "filled" : "outlined"}
           />
         ))}

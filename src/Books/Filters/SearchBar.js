@@ -12,9 +12,15 @@ export default function SearchBar() {
       <Input
         id="input-with-icon-adornment"
         name="name"
+        // onChange={(event) =>
+        //   dispatch({ type: "Search", payload: event.target.value })
+        // }
+
         onChange={(event) =>
-          dispatch({ type: "Search", payload: event.target.value })
+          dispatch({ type: "Merge", payload: {value:event.target.value, filter:state.filters.category} })
         }
+       
+
         startAdornment={
           <InputAdornment position="start">
             <SearchIcon />
