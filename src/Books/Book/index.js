@@ -17,37 +17,37 @@ import {
 export default function Book({ id, cover, title, price, stock, category }) {
   return (
     <Grid item xs={3}>
-      <Card sx={{ maxWidth: 345 }} variant='outlined'>
+      <Card sx={{ maxWidth: 345 }} variant="outlined">
         <CardActionArea>
-          <CardMedia component='img' height='250' image={cover} alt={title} />
+          <CardMedia component="img" height="250" image={cover} alt={title} />
           <CardContent>
-            <Typography gutterBottom variant='h5' component='h5'>
+            <Typography gutterBottom variant="h5" component="h5">
               {title?.toUpperCase()}
             </Typography>
-            <Typography variant='body2' color='text.secondary'>
+            <Typography variant="body2" color="text.secondary">
               Dolor excepteur irure consectetur velit ullamco labore ullamco
               consectetur. Laborum dolor nostrud commodo quis proident ea esse
               sunt dolore ut.
             </Typography>
             <Chip
               label={category}
-              size='small'
-              color='secondary'
-              variant='filled'
+              size="small"
+              color="secondary"
+              variant="filled"
               sx={{ my: 2 }}
             />
             <List dense>
               <ListItem sx={{ padding: 0, margin: 0 }}>
-                <ListItemText primary='Stock' secondary={stock} />
+                <ListItemText primary="Stock" secondary={stock} />
               </ListItem>
               <ListItem sx={{ padding: 0, margin: 0 }}>
-                <ListItemText primary='Price' secondary={`${price}€`} />
+                <ListItemText primary="Price" secondary={`${price}€`} />
               </ListItem>
             </List>
           </CardContent>
         </CardActionArea>
         <CardActions sx={{ backgroundColor: "secondary" }}>
-          <Button size='small' color='primary'>
+          <Button size="small" color="primary">
             Buy
           </Button>
         </CardActions>
