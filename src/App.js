@@ -34,9 +34,9 @@ function reducer(state,action){
   break;
   case "FilterBook":
     // console.log(state)
-     console.log("payload",action.payload)
+    //  console.log("payload",action.payload)
     // console.log("categoria",state.books.categories)
-    console.log("libri",state.books.filteredBooks)
+    // console.log("libri",state.books.filteredBooks)
     // (action.payload="All")?books:
 
   return {...state,books:{...state.books,filteredBooks:(action.payload==="All")?books:books.filter((books) => books.category === action.payload)}, filters:{...state.filters, category:action.payload}}
@@ -64,8 +64,3 @@ function App() {
 export default App;
 
 
-// function setBooks(state,action){
-//   state.filters.category === "All"
-//     ? filteredBooks
-//     : filteredBooks.filter((book) => state.books.categories === state.filters.category)
-// }

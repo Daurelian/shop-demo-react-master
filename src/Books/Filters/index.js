@@ -5,7 +5,7 @@ import { AppContext } from "../../App";
 
 const filters = ["All", "Design", "Mobile", "Ux", "DevOps", "Essentials"];
 
-export default function Filters({ selectedFilter, selectFilter }) {
+export default function Filters() {
   const {state,dispatch} = useContext(AppContext);
   return (
     <>
