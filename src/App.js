@@ -54,7 +54,6 @@ function reducer(state, action) {
       };
       break;
     case "Search":
-      console.log(action.payload);
       return {
         ...state,
         books: {
